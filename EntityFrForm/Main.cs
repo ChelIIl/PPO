@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace EntityFrForm
 {
     public partial class Main : Form
-    {        
+    {
         public Main()
         {
             InitializeComponent();
@@ -24,12 +24,6 @@ namespace EntityFrForm
             year_t.ReadOnly = true;
             mileage_t.ReadOnly = true;
             allResButton.Text = "";
-        }
-        private void add_button_Click(object sender, EventArgs e)
-        {
-            ADD ad = new ADD();
-            this.Hide();
-            ad.Show();
         }
 
         private void delete_button_Click(object sender, EventArgs e)
@@ -56,23 +50,9 @@ namespace EntityFrForm
             }
         }
 
-        private void search_button_Click(object sender, EventArgs e)
-        {
-            SEARCH se = new SEARCH();
-            this.Hide();
-            se.Show();
-        }
-
-        private void change_button_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            SEARCH ch = new SEARCH();
-            ch.Show();
-        }
-
         private void check_add_CheckedChanged(object sender, EventArgs e)
         {
-            if(check_add.Checked)
+            if (check_add.Checked)
             {
                 Mark_t.ReadOnly = false;
                 colour_t.ReadOnly = false;
